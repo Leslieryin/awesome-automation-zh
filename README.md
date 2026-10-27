@@ -1,5 +1,7 @@
 # awesome-automation-zh · 自动化专业开源资源导航
 
+![CI](https://github.com/Leslieryin/awesome-automation-zh/actions/workflows/ci.yml/badge.svg)
+
 为自动化（及其近亲：电气、测控、机器人工程）专业学生整理的开源资源导航。不是链接堆砌——每条都有**一句话点评**告诉你它解决什么问题、什么时候用，最后附一条从大一到大四的**学习路径**。
 
 > 收录标准：开源、可实际拿来用、社区活跃或经过时间检验。欢迎通过 Issue/PR 补充。
