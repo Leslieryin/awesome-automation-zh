@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 检查 README 中的链接
+      - name: 检查 README 与贡献指南中的链接
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -24,5 +24,59 @@ jobs:
             --timeout 30
             --max-concurrency 6
             README.md
+            CONTRIBUTING.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 校验条目格式
+        run: |
+          # CONTRIBUTING.md 里承诺了「分隔符写成 - 或 : 会被 CI 拦」，
+          # 这个 job 就是兑现那句话的地方。改了规则记得同步改文档。
+          cat > /tmp/fmt.py <<'PY'
+          import re, sys
+          from pathlib import Path
+
+          text = Path("README.md").read_text(encoding="utf-8")
+          lines = text.splitlines()
+          problems = []
+          items = 0
+          seen = {}
+
+          for i, line in enumerate(lines, 1):
+              s = line.strip()
+              if not s.startswith("- "):
+                  continue
+              items += 1
+
+              # 期望：- [名称](链接) —— 点评   （中文破折号，前后各一个空格）
+              m = re.match(r"^- \[[^\]]+\]\((https?://[^)]+)\)\s+——\s+(.+)$", s)
+              if not m:
+                  problems.append(f"  L{i}: 格式不符，应为 `- [名称](链接) —— 点评`  |  {s[:70]}")
+                  continue
+
+              url, comment = m.group(1), m.group(2).strip()
+              if len(comment) < 6:
+                  problems.append(f"  L{i}: 点评只有 {len(comment)} 字，至少要 6 字  |  {s[:70]}")
+              if url in seen:
+                  problems.append(f"  L{i}: 链接重复（L{seen[url]} 已出现过）  |  {url}")
+              else:
+                  seen[url] = i
+
+          print(f"检查了 {items} 条推荐")
+          if problems:
+              print("::error::README 格式不合规，详见下方")
+              print("\n".join(problems))
+              sys.exit(1)
+          print("格式全部合规 ✓")
+          PY
+          python3 /tmp/fmt.py
+
