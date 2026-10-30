@@ -18,6 +18,8 @@
 - [OpenModelica](https://github.com/OpenModelica/OpenModelica) —— 基于 Modelica 语言的物理系统建模，多领域（电/机械/热/液）联合仿真利器
 - [ControlSystems.jl](https://github.com/JuliaControl/ControlSystems.jl) —— Julia 生态的控制工具箱，速度极快，适合大规模/实时场景研究
 - [control-lab](https://github.com/Leslieryin/control-lab) —— 单文件网页版自控原理实验台（本作者出品）：拖滑块看 ζ/Kp/Ki/Kd 对曲线的影响，预习复习神器
+- [modern-control-lab](https://github.com/Leslieryin/modern-control-lab) —— 同款现代控制理论实验台：状态空间 / 能控能观判据 / Ackermann 极点配置 / 状态观测器 / 卡尔曼滤波，内置手写矩阵库
+- [process-control-lab](https://github.com/Leslieryin/process-control-lab) —— 过程控制实验台：一阶加纯滞后、Smith 预估补偿、串级、前馈-反馈，把「纯滞后为什么难控」变成看得见的曲线
 
 ## 二、嵌入式与单片机
 
@@ -30,6 +32,7 @@
 - [Arduino](https://github.com/arduino/Arduino) —— 快速原型之王，验证传感器/执行器想法时比 STM32 快十倍
 - [LVGL](https://github.com/lvgl/lvgl) —— 嵌入式 GUI 事实标准，做带屏幕的作品（竞赛/课设）直接上
 - [Wokwi](https://wokwi.com/) —— 浏览器里仿真 ESP32/Arduino/STM32，没板子也能写作业调试
+- [8086-emulator-lab](https://github.com/Leslieryin/8086-emulator-lab) —— 浏览器里的 8086 虚拟实验箱（本作者出品）：微机原理课设的 CPU/8255/8253/8259/ADC0808 仿真，单步执行看标志位，不用装 DOSBox 和 Proteus
 
 ## 三、机器人与 ROS2
 
@@ -70,9 +73,9 @@
 
 **大一**：C 语言 + 单片机入门（Arduino 快速起兴趣 → STM32 裸机），装好 [PlatformIO](https://github.com/platformio/platformio-core)。数学课认真学——后面全是回响。
 
-**大二**：模电数电 + [STM32Cube](https://github.com/STMicroelectronics) HAL 库实战；接触 [FreeRTOS](https://github.com/FreeRTOS/FreeRTOS) 理解多任务；开始打比赛（智能车/电赛，用上面第四节的资源）。
+**大二**：模电数电 + [STM32Cube](https://github.com/STMicroelectronics) HAL 库实战；接触 [FreeRTOS](https://github.com/FreeRTOS/FreeRTOS) 理解多任务；微机原理课配 [8086-emulator-lab](https://github.com/Leslieryin/8086-emulator-lab) 在浏览器里跑汇编；开始打比赛（智能车/电赛，用上面第四节的资源）。
 
-**大三**：自控原理配 [control-lab](https://github.com/Leslieryin/control-lab) + [python-control](https://github.com/python-control/python-control) 做仿真作业；学 [ROS 2](https://docs.ros.org/)；用 [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) 补机器人算法。确定方向（控制/嵌入式/机器人/视觉）。
+**大三**：自控原理配 [control-lab](https://github.com/Leslieryin/control-lab) + [python-control](https://github.com/python-control/python-control) 做仿真作业；现控和过程控制分别有 [modern-control-lab](https://github.com/Leslieryin/modern-control-lab) 和 [process-control-lab](https://github.com/Leslieryin/process-control-lab) 陪练；学 [ROS 2](https://docs.ros.org/)；用 [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) 补机器人算法。确定方向（控制/嵌入式/机器人/视觉）。
 
 **大四**：选定一个开源项目**深入读源码并提交 PR**（比再刷十个教程有用）；毕设尽量贴近真实工程（如基于 PX4 或 ROS 2 做完整系统）。
 
