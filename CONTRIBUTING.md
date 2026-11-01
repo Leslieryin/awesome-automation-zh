@@ -95,7 +95,7 @@
 2. 本地跑一遍格式检查，确认不会被 CI 挡：
 
 ```bash
-python scripts/check_links.py   # 链接能不能打开
+python scripts/check_format.py  # 与 CI 同一份格式校验（链接检查由 CI 的 lychee 每周自动跑）
 ```
 
 3. PR 描述里写一句"你用它做过什么"

@@ -12,7 +12,7 @@
 
 不装 MATLAB 也能学自控——这些开源工具覆盖了课程与课程设计的绝大部分需求。
 
-- [python-control](https://github.com/python-control/python-control) —— Python 版 Control System Toolbox：传递函数、阶跃响应、Bode/Nyquist、LQR/LQR 全都有，配合 Jupyter 做实验报告体验极好
+- [python-control](https://github.com/python-control/python-control) —— Python 版 Control System Toolbox：传递函数、阶跃响应、Bode/Nyquist、LQR/LQG 全都有，配合 Jupyter 做实验报告体验极好
 - [GNU Octave](https://octave.org/) —— 最接近 MATLAB 的开源替代，语法基本兼容，课程里的 MATLAB 作业大多能直接跑
 - [Scilab / Xcos](https://www.scilab.org/) —— 开源「MATLAB+Simulink」组合，Xcos 拖块仿真可作为 Simulink 平替
 - [OpenModelica](https://github.com/OpenModelica/OpenModelica) —— 基于 Modelica 语言的物理系统建模，多领域（电/机械/热/液）联合仿真利器
