@@ -8,6 +8,19 @@
 
 > 收录标准：开源、可实际拿来用、社区活跃或经过时间检验。想补充或纠错，先看 [贡献指南](CONTRIBUTING.md)——里面有格式要求（CI 会校验）和点评该写什么。
 
+## 如果你只有十分钟
+
+先挑最急的那件。下面这几条是本人做的，放最前面只因为最对口——不感兴趣直接跳到后面各章，那里全是第三方资源。
+
+| 你现在的处境 | 直接看这个 |
+|---|---|
+| 微机原理课设，Proteus 装不上 | [8086 虚拟实验箱](https://github.com/Leslieryin/8086-emulator-lab) —— 浏览器里跑课设汇编，单步执行看标志位，不用装任何东西 |
+| 自控原理期末，参数一变曲线就变 | [control-lab](https://github.com/Leslieryin/control-lab) —— 拖 ζ、Kp、Ki、Kd，看阶跃响应实时变化 |
+| 现代控制考状态空间，能控能观判据记不住 | [modern-control-lab](https://github.com/Leslieryin/modern-control-lab) —— 判据手算一遍，图上验证 |
+| 过程控制讲纯滞后，课本那句「难控」太抽象 | [process-control-lab](https://github.com/Leslieryin/process-control-lab) —— 拖滞后时间，看同一组 PID 怎么从稳定走到发散 |
+| 信号与系统，采样定理和混叠绕不明白 | [signals-lab](https://github.com/Leslieryin/signals-lab) —— 拖采样率，看 5 kHz 怎么混叠成 3 kHz |
+| 数据库课设要交建库脚本 | [database-course-design](https://github.com/Leslieryin/database-course-design) —— 从建库、约束到索引视图触发器的完整 T-SQL |
+
 ## 一、控制理论与仿真
 
 不装 MATLAB 也能学自控——这些开源工具覆盖了课程与课程设计的绝大部分需求。
